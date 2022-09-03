@@ -1,8 +1,25 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showIcon(IconNames.Happy)
-    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
+    if (receivedNumber == 0) {
+        basic.showLeds(`
+            . . # . .
+            . # . # .
+            # . . . #
+            # # # # #
+            # . . . #
+            `)
+    } else {
+        basic.showLeds(`
+            # # # # .
+            # . . . #
+            # # # # .
+            # . . . #
+            # # # # .
+            `)
+    }
+    basic.pause(100)
+    basic.clearScreen()
 })
-radio.setGroup(1)
-basic.forever(function () {
+input.onButtonPressed(Button.A, function () {
 	
 })
+radio.setGroup(1)
