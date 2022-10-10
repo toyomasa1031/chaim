@@ -1,20 +1,16 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 0) {
+        music.playTone(262, music.beat(BeatFraction.Whole))
         basic.showLeds(`
-            . . # . .
-            . # . # .
+            . # # # .
             # . . . #
-            # # # # #
             # . . . #
+            # . . . #
+            . # # # .
             `)
     } else {
-        basic.showLeds(`
-            # # # # .
-            # . . . #
-            # # # # .
-            # . . . #
-            # # # # .
-            `)
+        music.playTone(392, music.beat(BeatFraction.Whole))
+        basic.showIcon(IconNames.No)
     }
     basic.pause(100)
     basic.clearScreen()
