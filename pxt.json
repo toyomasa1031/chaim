@@ -1,11 +1,14 @@
 {
-    "name": "chaim-oya",
+    "name": "chaim-oya #2",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "radio-broadcast": "*"
+        "radio-broadcast": "*",
+        "servo": "*",
+        "microturtle": "github:microsoft/pxt-microturtle#v0.0.9",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.3"
     },
     "files": [
         "main.blocks",
