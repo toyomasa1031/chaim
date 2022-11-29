@@ -60,6 +60,10 @@ input.onButtonPressed(Button.B, function () {
     }
     strip.showColor(neopixel.colors(NeoPixelColors.Black))
 })
-let 角度 = 0
 let strip: neopixel.Strip = null
+let 角度 = 0
+radio.setGroup(2)
+角度 = 0
 strip = neopixel.create(DigitalPin.P1, 12, NeoPixelMode.RGB)
+pins.servoWritePin(AnalogPin.P0, 角度)
+pins.servoWritePin(AnalogPin.P2, 角度)
